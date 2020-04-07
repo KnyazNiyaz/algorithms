@@ -1,0 +1,170 @@
+html,
+body {
+  height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+}
+
+form {
+  width: 50%;
+}
+
+input {
+  display: block;
+  width: 100%;
+  margin-top: 2rem;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.solution {
+  margin-top: 2rem;
+  border-bottom: 2px solid;
+}
+
+.number {
+  padding: 10px;
+  border: 1px solid #717171;
+  border-radius: 5px;
+  margin: 0 8px;
+}
+
+.part {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reverse-part {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.title {
+  display: flex;
+  border: 1px solid blue;
+  justify-content: center;
+  padding: 8px 0;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+aside .header {
+  display: flex;
+  padding: 8px 1rem;
+  border-radius: 5px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+aside .title span {
+  display: flex;
+  border: 1px solid blue;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+aside .title .input {
+  margin: 0 8px;
+}
+
+#first ul {
+  padding-top: 20px;
+  position: relative;
+}
+
+#second ul {
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.part li {
+  float: left;
+  text-align: center;
+  list-style-type: none;
+  position: relative;
+  padding: 20px 5px 0 5px;
+}
+
+.reverse-part li {
+  float: left;
+  text-align: center;
+  list-style-type: none;
+  position: relative;
+  padding: 0 5px 20px 5px;
+}
+
+#display {
+  height: 60px;
+  border: 3px solid #228c3e;
+  margin: 2rem 0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+}
+
+.comparison-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0 1.5rem;
+}
+
+aside {
+  position: fixed;
+  width: 350px;
+  left: 0;
+  top: 0;
+  border-right: 2px solid #b9b9b9;
+  display: flex;
+  flex-direction: column;
+  font-size: 25px;
+  height: 100vh;
+  overflow-y: scroll;
+  z-index: 1;
+  background: white;
+}
+
+ol > li {
+  border-bottom: 1px solid black;
+}
+
+ol > li:last-child {
+  border: none;
+}
+
+main {
+  flex: 1;
+  margin-left: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 5rem;
+}
+
+.comparison {
+  margin: 5px;
+}
+
+.content {
+  display: flex;
+}
