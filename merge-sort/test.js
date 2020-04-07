@@ -34,10 +34,6 @@ $(document).ready(() => {
       title: reverseTreeTitle,
       content: reverseTreeContent,
     } = createNode('reverse-part');
-
-    let part1 = $('<li/>').addClass('part1');
-    let title1 = $('<div/>').addClass('title').appendTo(part1);
-    let content1 = $('<ul/>').addClass('content').appendTo(part1);
     reverseTreeNode.appendTo(reverseParent);
 
     unsortedArray.forEach((val) => {
@@ -57,6 +53,7 @@ $(document).ready(() => {
     const left = unsortedArray.slice(0, middle);
     const right = unsortedArray.slice(middle);
 
+    console.log(`Pass: LEFT ( ${left} ) || RIGHT (${right})`);
     const res = merge(
       mergeSort(left, content, reverseTreeContent),
       mergeSort(right, content, reverseTreeContent)
@@ -79,13 +76,14 @@ $(document).ready(() => {
     return title;
   }
 
-  function merge(left, right, p) {
+  function merge(left, right) {
+    console.log(`Merge: LEFT: (${left}) || RIGHT (${right})`);
     let log = $('<li/>').addClass('log').appendTo(logs);
     let header = $('<div/>').addClass('header').appendTo(log);
+    let comparisonList = $('<ul/>').addClass('comparison-list').appendTo(log);
     createTitle(left).appendTo(header);
     header.append(' - ');
     createTitle(right).appendTo(header);
-    let comparisonList = $('<ul/>').addClass('comparison-list').appendTo(log);
     let result = [];
 
     while (left.length && right.length) {
