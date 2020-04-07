@@ -1,8 +1,9 @@
 $(document).ready(() => {
   let logs = $('ol');
 
-  $('form').on('submit', function (e) {
+  $('#myForm').on('submit', function (e) {
     e.preventDefault();
+
     let values = $(this)
       .serializeArray()[0]
       .value.trim()
@@ -54,6 +55,13 @@ $(document).ready(() => {
     const right = unsortedArray.slice(middle);
 
     console.log(`Pass: LEFT ( ${left} ) || RIGHT (${right})`);
+    let log = $('<li/>').addClass('log').appendTo(logs);
+    let header = $('<div/>').addClass('header').appendTo(log);
+    let step = $('<span/>').addClass('step').addClass('pass').text('PASS: ')
+    let text = $('<span/>').addClass('text').text(`LEFT ( ${left} ) || RIGHT (${right})`);
+    step.appendTo(header)
+    text.appendTo(header)
+
     const res = merge(
       mergeSort(left, content, reverseTreeContent),
       mergeSort(right, content, reverseTreeContent)
@@ -80,10 +88,11 @@ $(document).ready(() => {
     console.log(`Merge: LEFT: (${left}) || RIGHT (${right})`);
     let log = $('<li/>').addClass('log').appendTo(logs);
     let header = $('<div/>').addClass('header').appendTo(log);
+    let step = $('<span/>').addClass('step').addClass('merge').text('MERGE: ')
     let comparisonList = $('<ul/>').addClass('comparison-list').appendTo(log);
-    createTitle(left).appendTo(header);
-    header.append(' - ');
-    createTitle(right).appendTo(header);
+    let text = $('<span/>').addClass('text').text(`LEFT: (${left}) || RIGHT (${right})`);
+    step.appendTo(header)
+    text.appendTo(header)
     let result = [];
 
     while (left.length && right.length) {

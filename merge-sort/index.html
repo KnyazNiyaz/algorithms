@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- <script src="merge-by-concantinating.js"></script> -->
-    <!-- <script src="merge-by-shifting.js"></script> -->
+    <!-- <script src="../generator/utils.js"></script> -->
+
     <script src="test.js"></script>
+    <script type = "module" src="../generator/generator.js"></script>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="merge.css">
 </head>
@@ -16,9 +17,12 @@
         <ol></ol>
     </aside>
     <main>
-        <form id="myForm" action="">
-            <input name="in" type="text" placeholder="type your numbers divided by space">
+        <form id="myForm" action="#">
+            <input id="list-input" name="form0nput" type="text" placeholder="type your numbers divided by space">
+            <button id="submit" type="submit">Submit</button>
         </form>
+        <generator-btn></generator-btn>
+
     
         <div>
             <div class="solution tree">
